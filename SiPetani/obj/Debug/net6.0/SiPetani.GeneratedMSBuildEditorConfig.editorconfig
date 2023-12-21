@@ -1,0 +1,65 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = SiPetani
+build_property.RootNamespace = SiPetani
+build_property.ProjectDir = D:\Creation\CSharp\SiPetani\SiPetani\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\Creation\CSharp\SiPetani\SiPetani
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/Creation/CSharp/SiPetani/SiPetani/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Creation/CSharp/SiPetani/SiPetani/Pages/Cuaca.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VhY2EucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Creation/CSharp/SiPetani/SiPetani/Pages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Creation/CSharp/SiPetani/SiPetani/Pages/PetaPertanian.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGV0YVBlcnRhbmlhbi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Creation/CSharp/SiPetani/SiPetani/Pages/Produksi.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVrc2kucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Creation/CSharp/SiPetani/SiPetani/Shared/SurveyPrompt.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Creation/CSharp/SiPetani/SiPetani/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Creation/CSharp/SiPetani/SiPetani/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-rgdxts4zv8
+
+[D:/Creation/CSharp/SiPetani/SiPetani/Shared/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-zeukz2riwe
+
+[D:/Creation/CSharp/SiPetani/SiPetani/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Creation/CSharp/SiPetani/SiPetani/Pages/_Host.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0hvc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Creation/CSharp/SiPetani/SiPetani/Pages/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0xheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 

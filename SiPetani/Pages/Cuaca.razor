@@ -1,0 +1,96 @@
+﻿@page "/cuaca"
+<PageTitle>Cuaca</PageTitle>
+
+@using System.Net.Http
+@inject HttpClient Http
+
+<div class="weather-container">
+    <div class="weather-card1">
+        <h3>Weather App &nbsp;&nbsp; • • •</h3>
+
+        <div class="form-group">
+            <label for="city">Masukkan Nama Kota</label>
+            <br />
+            <input type="text" class="form-control" @bind="city" />
+            <button class="btn btn-primary" @onclick="GetWeather">Dapatkan Cuaca</button>
+        </div>
+    </div>
+
+    <div class="weather-card2">
+        <h3>Data Cuaca &nbsp;&nbsp; • • •</h3>
+        @if (weatherData != null)
+        {
+            <div class="hasil-suhu">
+                <h4>Cuaca di @weatherData.Name</h4>
+                <p>Suhu: @(weatherData.Main?.Temp ?? 0) °C</p>
+                <p>Deskripsi: @(weatherData.Weather?.FirstOrDefault()?.Description ?? "N/A")</p>
+            </div>
+
+        }
+    </div>
+
+   <div class="weather-card3">
+        <h3>Informasi &nbsp;&nbsp; • • •</h3>
+        <p> Warning!!! Aplikasi dalam pengembangan</p>
+    </div>
+</div>
+
+<div class="table-buatan">
+    <th></th>
+</div>
+
+@code {
+    private string city = "";
+    private string predefinedCity = "Jakarta";
+    private WeatherData weatherData = new WeatherData();
+
+    private async Task GetWeather()
+    {
+        if (string.IsNullOrEmpty(city))
+        {
+            return;
+        }
+
+        try
+        {
+            string apiKey = "cfab2e47d70a22f05b460dc15e059bf0";
+            string apiUrl = $"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={apiKey}&units=metric";
+            weatherData = await Http.GetFromJsonAsync<WeatherData>(apiUrl);
+
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error: {ex.Message}");
+            // Tambahkan logika untuk menangani pesan kesalahan
+        }
+    }
+
+    private class Main
+    {
+        public double Temp { get; set; }
+    }
+
+    private class Weather
+    {
+        public string Description { get; set; }
+
+        public Weather()
+        {
+            Description = string.Empty;
+        }
+    }
+
+    private class WeatherData
+    {
+        public string? Name { get; set; }
+        public Main? Main { get; set; }
+        public Weather[]? Weather { get; set; }
+
+        public WeatherData()
+        {
+            Name = string.Empty;
+            Main = new Main();
+            Weather = Array.Empty<Weather>();
+        }
+    }
+}

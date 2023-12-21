@@ -1,0 +1,12 @@
+D:\Creation\CSharp\SiPetani\DataLibrary\bin\Debug\net6.0\DataLibrary.deps.json
+D:\Creation\CSharp\SiPetani\DataLibrary\bin\Debug\net6.0\DataLibrary.dll
+D:\Creation\CSharp\SiPetani\DataLibrary\bin\Debug\net6.0\DataLibrary.pdb
+D:\Creation\CSharp\SiPetani\DataLibrary\obj\Debug\net6.0\DataLibrary.csproj.AssemblyReference.cache
+D:\Creation\CSharp\SiPetani\DataLibrary\obj\Debug\net6.0\DataLibrary.GeneratedMSBuildEditorConfig.editorconfig
+D:\Creation\CSharp\SiPetani\DataLibrary\obj\Debug\net6.0\DataLibrary.AssemblyInfoInputs.cache
+D:\Creation\CSharp\SiPetani\DataLibrary\obj\Debug\net6.0\DataLibrary.AssemblyInfo.cs
+D:\Creation\CSharp\SiPetani\DataLibrary\obj\Debug\net6.0\DataLibrary.csproj.CoreCompileInputs.cache
+D:\Creation\CSharp\SiPetani\DataLibrary\obj\Debug\net6.0\DataLibrary.dll
+D:\Creation\CSharp\SiPetani\DataLibrary\obj\Debug\net6.0\refint\DataLibrary.dll
+D:\Creation\CSharp\SiPetani\DataLibrary\obj\Debug\net6.0\DataLibrary.pdb
+D:\Creation\CSharp\SiPetani\DataLibrary\obj\Debug\net6.0\ref\DataLibrary.dll

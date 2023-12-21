@@ -1,0 +1,51 @@
+﻿<div class="sidenavbar">
+    <div class="logo">
+        <img src="Assets/SiPetaniNoBG.png" class="logo-sipetani" />
+    </div>
+
+    <div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
+        <nav class="flex-column">
+            <div class="nav-item px-3 ">
+                <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+                    <span class="oi oi-home" aria-hidden="true"></span> Beranda
+                </NavLink>
+            </div>
+            <div class="nav-item px-3">
+                <NavLink class="nav-link" href="cuaca">
+                    <span class="oi oi-plus" aria-hidden="true"></span> Cuaca
+                </NavLink>
+            </div>
+            <div class="nav-item px-3">
+                <NavLink class="nav-link" href="produksi">
+                    <span class="oi oi-list-rich" aria-hidden="true"></span> Produksi
+                </NavLink>
+            </div>
+            <div class="nav-item px-3">
+                <NavLink class="nav-link" href="hasilpanen">
+                    <span class="oi oi-list-rich" aria-hidden="true"></span> Laporan Hasil Panen
+                </NavLink>
+            </div>
+            <div class="nav-item px-3">
+                <NavLink class="nav-link" href="petapertanian">
+                    <span class="oi oi-list-rich" aria-hidden="true"></span> Peta Pertanian
+                </NavLink>
+            </div>
+            <div class="nav-item px-3">
+                <NavLink class="nav-link" href="pemberitahuan">
+                    <span class="oi oi-list-rich" aria-hidden="true"></span> Pemberitahuan
+                </NavLink>
+            </div>
+        </nav>
+    </div>
+</div>
+
+@code {
+    private bool collapseNavMenu = true;
+
+    private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+    private void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+}
