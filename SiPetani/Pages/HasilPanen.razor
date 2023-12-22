@@ -1,7 +1,155 @@
 ﻿@page "/HasilPanen"
+@using DataLibrary
+@using Models
+@using Microsoft.Extensions.Configuration
+@inject IDataAccess _data
+@inject IConfiguration _config
+@inject HttpClient Http
+@inject IJSRuntime JSRuntime
 
-<h3>Laporan</h3>
+<div class="sub-navbar">
+	<ul>
+		<li><button class="btn btn-primary1" @onclick='(() => ChangeQuery("SELECT * FROM Stock_In", "stock_in"))'>Stock In</button></li>
+		<li><button class="btn btn-primary1" @onclick='(() => ChangeQuery("SELECT * FROM Stock_Out", "stock_out"))'>Stock Out</button></li>
+	</ul>
+</div>
+
+@if (stock_in == null)
+{
+	<p><em>Loading...</em></p>
+}
+else if (stock_in != null && mode == "stock_in")
+{
+<div class="table-buatan">
+	<table class="content-table">
+		<thead>
+			<tr>
+				<th>Input Id</th>
+				<th>Stock Id</th>
+				<th>Input Date</th>
+				<th>Input Quantity</th>
+				<th>Sender</th>
+				<th>Managed By</th>
+				<th>Description</th>
+				<th></th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			@foreach (var p in stock_in)
+			{
+				<tr>
+					<td>@p.Input_Id</td>
+					<td>@p.Stock_Id</td>
+					<td>@p.Input_Date</td>
+					<td>@p.Input_Quantity</td>
+					<td>@p.Sender</td>
+					<td>@p.Managed_By</td>
+					<td>@p.Description</td>
+					<td><button class="btn btn-warning">Edit</button></td>
+					<td><button class="btn btn-danger">Delete</button></td>
+				</tr>
+			}
+		</tbody>
+	</table>
+
+	<button class="btn btn-primary" style="margin-left:25px">Insert</button>
+</div>
+}
+else if (stock_out != null && mode == "stock_out")
+{
+<div class="table-buatan">
+	<table class="content-table">
+		<thead>
+			<tr>
+				<th>Output Id</th>
+				<th>Stock Id</th>
+				<th>Output Date</th>
+				<th>Output Quantity</th>
+				<th>Recipient</th>
+				<th>Managed By</th>
+				<th>Description</th>
+				<th></th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			@foreach (var p in stock_out)
+			{
+				<tr>
+					<td>@p.Output_Id</td>
+					<td>@p.Stock_Id</td>
+					<td>@p.Output_Date</td>
+					<td>@p.Output_Quantity</td>
+					<td>@p.Recipient</td>
+					<td>@p.Managed_By</td>
+					<td>@p.Description</td>
+					<td><button class="btn btn-warning">Edit</button></td>
+					<td><button class="btn btn-danger">Delete</button></td>
+				</tr>
+			}
+		</tbody>
+	</table>
+
+	<button class="btn btn-primary" style="margin-left:25px">Insert</button>
+</div>
+}
 
 @code {
+	// Models
+	List<StockInModel> stock_in;
+	List<StockOutModel> stock_out;
 
+	// sql stuff
+	string sqlSelected = "SELECT * FROM Stock_In";
+	string mode = "stock_in";
+
+	private async void ChangeQuery(string sql, string _mode)
+	{
+		sqlSelected = sql;
+		mode = _mode;
+
+		await OnInitializedAsync();
+	}
+
+	private async Task InsertData()
+	{
+		string sql = "INSERT INTO Stock_In(Output_Id, Status_Id) values (@Output_Id, @Status_Id);";
+
+		await _data.SaveData(sql, new { Output_Id = "testcode", Status_Id = "testdesc" }, _config.GetConnectionString("default"));
+
+		await OnInitializedAsync();
+	}
+
+	private async Task UpdateData()
+	{
+		string sql = "UPDATE Stock_In SET Output_Id = @Output_Id WHERE Status_Id = @Status_Id;";
+
+		await _data.SaveData(sql, new { Output_Id = "this", Status_Id = "testdesc" }, _config.GetConnectionString("default"));
+
+		await OnInitializedAsync();
+	}
+
+	private async Task DeleteData()
+	{
+		string sql = "DELETE FROM Stock_In WHERE Status_Id = @Status_Id";
+
+		await _data.SaveData(sql, new { Status_Id = "testdesc" }, _config.GetConnectionString("default"));
+
+		await OnInitializedAsync();
+	}
+
+	protected override async Task OnInitializedAsync()
+	{
+		switch (mode)
+		{
+			case "stock_in":
+				stock_in = await _data.LoadData<StockInModel, dynamic>(sqlSelected, new { }, _config.GetConnectionString("default"));
+				break;
+			case "stock_out":
+				stock_out = await _data.LoadData<StockOutModel, dynamic>(sqlSelected, new { }, _config.GetConnectionString("default"));
+				break;
+		}
+
+	}
 }

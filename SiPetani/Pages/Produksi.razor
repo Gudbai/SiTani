@@ -7,102 +7,83 @@
 @using Microsoft.Extensions.Configuration
 @inject IDataAccess _data
 @inject IConfiguration _config
+@inject HttpClient Http
+@inject IJSRuntime JSRuntime
 
-@* <h1>Weather forecast</h1>
-
-<p>This component demonstrates fetching data from a service.</p>
-
-@if (forecasts == null)
+@if (stock == null)
 {
-    <p><em>Loading...</em></p>
+	<p><em>Loading...</em></p>
 }
 else
 {
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Date</th>
-                <th>Temp. (C)</th>
-                <th>Temp. (F)</th>
-                <th>Summary</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var forecast in forecasts)
-            {
-                <tr>
-                    <td>@forecast.Date.ToShortDateString()</td>
-                    <td>@forecast.TemperatureC</td>
-                    <td>@forecast.TemperatureF</td>
-                    <td>@forecast.Summary</td>
-                </tr>
-            }
-        </tbody>
-    </table>
-} *@
+	<div class="table-buatan">
+		<table class="content-table">
+			<thead>
+				<tr>
+					<th>Stock Id</th>
+					<th>Crops Id</th>
+					<th>Stock Quantity</th>
+					<th>Description</th>
+					<th></th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+				@foreach (var p in stock)
+				{
+					<tr>
+						<td>@p.Stock_Id</td>
+						<td>@p.Crops_Id</td>
+						<td>@p.Stock_Quantity</td>
+						<td>@p.Description</td>
+						<td><button class="btn btn-warning">Edit</button></td>
+						<td><button class="btn btn-danger">Delete</button></td>
+					</tr>
+				}
+			</tbody>
+		</table>
 
-
-
-@if (test == null)
-{
-    <p><em>Loading...</em></p>
+		<button class="btn btn-primary" style="margin-left:25px">Insert</button>
+	</div>
 }
-else
-{
-    @foreach (var p in test)
-    {
-        <p>
-            @p.StatusID @p.StatusCode @p.StatusDescription
-        </p>
-    }
-
-    <button class="btn btn-primary" @onclick="InsertData">Insert</button>
-    <button class="btn btn-warning" @onclick="UpdateData">Update</button>
-    <button class="btn btn-danger" @onclick="DeleteData">Delete</button>
-}
-
 
 
 @code {
-    // private WeatherForecast[]? forecasts;
+	// Models
+	List<StockModel> stock;
 
-    // protected override async Task OnInitializedAsync()
-    // {
-    //     forecasts = await ForecastService.GetForecastAsync(DateTime.Now);
-    // }
+	// sql stuff
+	string sqlSelected = "SELECT * FROM Stock";
 
-    List<TestModel> test;
+	private async Task InsertData()
+	{
+		string sql = "INSERT INTO tblStatus(statusCode, statusDescription) values (@StatusCode, @StatusDescription);";
 
-    private async Task InsertData()
-    {
-        string sql = "INSERT INTO tblStatus(statusCode, statusDescription) values (@StatusCode, @StatusDescription);";
+		await _data.SaveData(sql, new { StatusCode = "testcode", StatusDescription = "testdesc" }, _config.GetConnectionString("default"));
 
-        await _data.SaveData(sql, new { StatusCode = "testcode", StatusDescription = "testdesc" }, _config.GetConnectionString("default"));
+		await OnInitializedAsync();
+	}
 
-        await OnInitializedAsync();
-    }
+	private async Task UpdateData()
+	{
+		string sql = "UPDATE tblStatus SET statusCode = @StatusCode WHERE statusDescription = @StatusDescription;";
 
-    private async Task UpdateData()
-    {
-        string sql = "UPDATE tblStatus SET statusCode = @StatusCode WHERE statusDescription = @StatusDescription;";
+		await _data.SaveData(sql, new { StatusCode = "this", StatusDescription = "testdesc" }, _config.GetConnectionString("default"));
 
-        await _data.SaveData(sql, new { StatusCode = "this", StatusDescription = "testdesc" }, _config.GetConnectionString("default"));
+		await OnInitializedAsync();
+	}
 
-        await OnInitializedAsync();
-    }
+	private async Task DeleteData()
+	{
+		string sql = "DELETE FROM tblStatus WHERE statusDescription = @StatusDescription";
 
-    private async Task DeleteData()
-    {
-        string sql = "DELETE FROM tblStatus WHERE statusDescription = @StatusDescription";
+		await _data.SaveData(sql, new { StatusDescription = "testdesc" }, _config.GetConnectionString("default"));
 
-        await _data.SaveData(sql, new { StatusDescription = "testdesc" }, _config.GetConnectionString("default"));
+		await OnInitializedAsync();
+	}   
 
-        await OnInitializedAsync();
-    }   
-
-    protected override async Task OnInitializedAsync()
-    {
-        string sql = "SELECT * FROM tblStatus";
-        test = await _data.LoadData<TestModel, dynamic>(sql, new {}, _config.GetConnectionString("default"));
-    }
+	protected override async Task OnInitializedAsync()
+	{
+		stock = await _data.LoadData<StockModel, dynamic>(sqlSelected, new { }, _config.GetConnectionString("default"));
+	}
 }

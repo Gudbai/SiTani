@@ -8,7 +8,7 @@ main {
     flex: 1;
 }
 
-.sidebar {
+.sidebar{
     background-color: #ebefee;
     border-radius: 0 15px 15px 0;
 }

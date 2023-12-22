@@ -11,12 +11,15 @@ html, body {
 }
 
 .logo {
-    height: 150px;
+    height: 100px;
+    padding-top:0;
 }
 
 .logo-sipetani {
+    position:absolute;
     width: 200px;
     padding: 0 0 0 25px;
+    top:40px;
 }
 
 .sidenavbar {
@@ -29,8 +32,8 @@ html, body {
 }
 
 .weather-card1 {
-    background-color: #dce3e6;
-    border-radius: 30px;
+    background-color: #ebefee;
+    border-radius: 15px;
     padding: 30px;
     margin: 20px;
     width: 35%;
@@ -49,8 +52,8 @@ html, body {
 
 
 .weather-card2 {
-    background-color: #dce3e6;
-    border-radius: 30px;
+    background-color: #ebefee;
+    border-radius: 15px;
     padding: 30px;
     margin: 20px;
     width: 35%;
@@ -68,8 +71,8 @@ html, body {
 
 
 .weather-card3 {
-    background-color: #dce3e6;
-    border-radius: 30px;
+    background-color: #ebefee;
+    border-radius: 15px;
     padding: 30px;
     margin: 20px;
     width: 300px;
@@ -204,6 +207,34 @@ label {
         }
 
 
+.beranda-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.link-item {
+    border-bottom: 2px solid #729d96;
+    padding: 20px;
+    color: #4e4e4e;
+}
+
+.beranda-container1 {
+    background-color: #ebefee;
+    padding: 30px;
+    margin-top: 10px;
+    border-radius: 10px;
+    height: 670px;
+    width: 700px;
+}
+
+.beranda-container2 {
+    background-color: #ebefee;
+    padding: 30px;
+    margin-top: 10px;
+    border-radius: 10px;
+    height: 670px;
+    width: 440px;
+}
 
 
 
@@ -248,3 +279,41 @@ label {
     .blazor-error-boundary::after {
         content: "An error has occurred."
     }
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+    margin-right: 3px;
+}
+
+.sub-navbar {
+    background-color: #729d96;
+    padding: 20px;
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.btn-primary1 {
+    background-color: #729d96;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.btn-primary1:hover {
+    background-color: #dce3e6;
+    color: #729d96;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}

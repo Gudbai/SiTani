@@ -1,7 +1,86 @@
 ﻿@page "/tanaman"
 
-<h3>ManajemenTanaman</h3>
+<PageTitle>Manajemen Tanaman</PageTitle>
+
+@using DataLibrary
+@using Models
+@using Microsoft.Extensions.Configuration
+@inject IDataAccess _data
+@inject IConfiguration _config
+@inject HttpClient Http
+@inject IJSRuntime JSRuntime
+
+@if (crops == null)
+{
+	<p><em>Loading...</em></p>
+}
+else
+{
+	<div class="table-buatan">
+		<table class="content-table">
+			<thead>
+				<tr>
+					<th>Crops Id</th>
+					<th>Crops Name</th>
+					<th>Crops Type</th>
+					<th></th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+				@foreach (var p in crops)
+				{
+					<tr>
+						<td>@p.Crops_Id</td>
+						<td>@p.Crops_Name</td>
+						<td>@p.Crops_Type</td>
+						<td><button class="btn btn-warning">Edit</button></td>
+						<td><button class="btn btn-danger">Delete</button></td>
+					</tr>
+				}
+			</tbody>
+		</table>
+
+		<button class="btn btn-primary" style="margin-left:25px">Insert</button>
+	</div>
+}
 
 @code {
+	// Models
+	List<CropsModel> crops;
 
+	// sql stuff
+	string sqlSelected = "SELECT * FROM Crops";
+
+	private async Task InsertData()
+	{
+		string sql = "INSERT INTO tblStatus(statusCode, statusDescription) values (@StatusCode, @StatusDescription);";
+
+		await _data.SaveData(sql, new { StatusCode = "testcode", StatusDescription = "testdesc" }, _config.GetConnectionString("default"));
+
+		await OnInitializedAsync();
+	}
+
+	private async Task UpdateData()
+	{
+		string sql = "UPDATE tblStatus SET statusCode = @StatusCode WHERE statusDescription = @StatusDescription;";
+
+		await _data.SaveData(sql, new { StatusCode = "this", StatusDescription = "testdesc" }, _config.GetConnectionString("default"));
+
+		await OnInitializedAsync();
+	}
+
+	private async Task DeleteData()
+	{
+		string sql = "DELETE FROM tblStatus WHERE statusDescription = @StatusDescription";
+
+		await _data.SaveData(sql, new { StatusDescription = "testdesc" }, _config.GetConnectionString("default"));
+
+		await OnInitializedAsync();
+	}
+
+	protected override async Task OnInitializedAsync()
+	{
+		crops = await _data.LoadData<CropsModel, dynamic>(sqlSelected, new { }, _config.GetConnectionString("default"));
+	}
 }

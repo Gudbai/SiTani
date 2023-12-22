@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "8mjXwWP3ouui4/imFvxJ3yZb7wgJ3iTTthRFkFa2lF0=",
+  "Hash": "G8rnxjZNspB8ZNIlQdYEiMuhnux/CI7SW73X4dpdYMk=",
   "Source": "SiPetani",
   "BasePath": "_content/SiPetani",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "SiPetani\\wwwroot",
       "Source": "SiPetani",
-      "ContentRoot": "C:\\Users\\Asgarindo\\source\\repos\\SiTani\\SiPetani\\wwwroot\\",
+      "ContentRoot": "D:\\Creation\\GitHub Stuff\\SiTani\\SiPetani\\wwwroot\\",
       "BasePath": "_content/SiPetani",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\Asgarindo\\source\\repos\\SiTani\\SiPetani\\obj\\Debug\\net6.0\\scopedcss\\bundle\\SiPetani.styles.css",
+      "Identity": "D:\\Creation\\GitHub Stuff\\SiTani\\SiPetani\\obj\\Debug\\net6.0\\scopedcss\\bundle\\SiPetani.styles.css",
       "SourceId": "SiPetani",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Asgarindo\\source\\repos\\SiTani\\SiPetani\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
+      "ContentRoot": "D:\\Creation\\GitHub Stuff\\SiTani\\SiPetani\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
       "BasePath": "_content/SiPetani",
       "RelativePath": "SiPetani.styles.css",
       "AssetKind": "All",
@@ -31,13 +31,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Asgarindo\\source\\repos\\SiTani\\SiPetani\\obj\\Debug\\net6.0\\scopedcss\\bundle\\SiPetani.styles.css"
+      "OriginalItemSpec": "D:\\Creation\\GitHub Stuff\\SiTani\\SiPetani\\obj\\Debug\\net6.0\\scopedcss\\bundle\\SiPetani.styles.css"
     },
     {
-      "Identity": "C:\\Users\\Asgarindo\\source\\repos\\SiTani\\SiPetani\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\SiPetani.bundle.scp.css",
+      "Identity": "D:\\Creation\\GitHub Stuff\\SiTani\\SiPetani\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\SiPetani.bundle.scp.css",
       "SourceId": "SiPetani",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Asgarindo\\source\\repos\\SiTani\\SiPetani\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "D:\\Creation\\GitHub Stuff\\SiTani\\SiPetani\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/SiPetani",
       "RelativePath": "SiPetani.bundle.scp.css",
       "AssetKind": "All",
@@ -48,13 +48,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Asgarindo\\source\\repos\\SiTani\\SiPetani\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\SiPetani.bundle.scp.css"
+      "OriginalItemSpec": "D:\\Creation\\GitHub Stuff\\SiTani\\SiPetani\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\SiPetani.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\Asgarindo\\source\\repos\\SiTani\\SiPetani\\wwwroot\\Assets\\SiPetani.jpg",
+      "Identity": "D:\\Creation\\GitHub Stuff\\SiTani\\SiPetani\\wwwroot\\Assets\\SiPetani.jpg",
       "SourceId": "SiPetani",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Asgarindo\\source\\repos\\SiTani\\SiPetani\\wwwroot\\",
+      "ContentRoot": "D:\\Creation\\GitHub Stuff\\SiTani\\SiPetani\\wwwroot\\",
       "BasePath": "_content/SiPetani",
       "RelativePath": "Assets/SiPetani.jpg",
       "AssetKind": "All",
@@ -68,10 +68,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\SiPetani.jpg"
     },
     {
-      "Identity": "C:\\Users\\Asgarindo\\source\\repos\\SiTani\\SiPetani\\wwwroot\\Assets\\SiPetani2.png",
+      "Identity": "D:\\Creation\\GitHub Stuff\\SiTani\\SiPetani\\wwwroot\\Assets\\SiPetani2.png",
       "SourceId": "SiPetani",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Asgarindo\\source\\repos\\SiTani\\SiPetani\\wwwroot\\",
+      "ContentRoot": "D:\\Creation\\GitHub Stuff\\SiTani\\SiPetani\\wwwroot\\",
       "BasePath": "_content/SiPetani",
       "RelativePath": "Assets/SiPetani2.png",
       "AssetKind": "All",
@@ -85,10 +85,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\SiPetani2.png"
     },
     {
-      "Identity": "C:\\Users\\Asgarindo\\source\\repos\\SiTani\\SiPetani\\wwwroot\\Assets\\SiPetaniNoBG.png",
+      "Identity": "D:\\Creation\\GitHub Stuff\\SiTani\\SiPetani\\wwwroot\\Assets\\SiPetaniNoBG.png",
       "SourceId": "SiPetani",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Asgarindo\\source\\repos\\SiTani\\SiPetani\\wwwroot\\",
+      "ContentRoot": "D:\\Creation\\GitHub Stuff\\SiTani\\SiPetani\\wwwroot\\",
       "BasePath": "_content/SiPetani",
       "RelativePath": "Assets/SiPetaniNoBG.png",
       "AssetKind": "All",
@@ -102,10 +102,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\SiPetaniNoBG.png"
     },
     {
-      "Identity": "C:\\Users\\Asgarindo\\source\\repos\\SiTani\\SiPetani\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "Identity": "D:\\Creation\\GitHub Stuff\\SiTani\\SiPetani\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
       "SourceId": "SiPetani",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Asgarindo\\source\\repos\\SiTani\\SiPetani\\wwwroot\\",
+      "ContentRoot": "D:\\Creation\\GitHub Stuff\\SiTani\\SiPetani\\wwwroot\\",
       "BasePath": "_content/SiPetani",
       "RelativePath": "css/bootstrap/bootstrap.min.css",
       "AssetKind": "All",
@@ -119,10 +119,10 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\Asgarindo\\source\\repos\\SiTani\\SiPetani\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "Identity": "D:\\Creation\\GitHub Stuff\\SiTani\\SiPetani\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
       "SourceId": "SiPetani",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Asgarindo\\source\\repos\\SiTani\\SiPetani\\wwwroot\\",
+      "ContentRoot": "D:\\Creation\\GitHub Stuff\\SiTani\\SiPetani\\wwwroot\\",
       "BasePath": "_content/SiPetani",
       "RelativePath": "css/bootstrap/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -136,10 +136,10 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\Asgarindo\\source\\repos\\SiTani\\SiPetani\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
+      "Identity": "D:\\Creation\\GitHub Stuff\\SiTani\\SiPetani\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
       "SourceId": "SiPetani",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Asgarindo\\source\\repos\\SiTani\\SiPetani\\wwwroot\\",
+      "ContentRoot": "D:\\Creation\\GitHub Stuff\\SiTani\\SiPetani\\wwwroot\\",
       "BasePath": "_content/SiPetani",
       "RelativePath": "css/open-iconic/font/css/open-iconic-bootstrap.min.css",
       "AssetKind": "All",
@@ -153,10 +153,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\Asgarindo\\source\\repos\\SiTani\\SiPetani\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
+      "Identity": "D:\\Creation\\GitHub Stuff\\SiTani\\SiPetani\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
       "SourceId": "SiPetani",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Asgarindo\\source\\repos\\SiTani\\SiPetani\\wwwroot\\",
+      "ContentRoot": "D:\\Creation\\GitHub Stuff\\SiTani\\SiPetani\\wwwroot\\",
       "BasePath": "_content/SiPetani",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.eot",
       "AssetKind": "All",
@@ -170,10 +170,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot"
     },
     {
-      "Identity": "C:\\Users\\Asgarindo\\source\\repos\\SiTani\\SiPetani\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
+      "Identity": "D:\\Creation\\GitHub Stuff\\SiTani\\SiPetani\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
       "SourceId": "SiPetani",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Asgarindo\\source\\repos\\SiTani\\SiPetani\\wwwroot\\",
+      "ContentRoot": "D:\\Creation\\GitHub Stuff\\SiTani\\SiPetani\\wwwroot\\",
       "BasePath": "_content/SiPetani",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.otf",
       "AssetKind": "All",
@@ -187,10 +187,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf"
     },
     {
-      "Identity": "C:\\Users\\Asgarindo\\source\\repos\\SiTani\\SiPetani\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
+      "Identity": "D:\\Creation\\GitHub Stuff\\SiTani\\SiPetani\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
       "SourceId": "SiPetani",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Asgarindo\\source\\repos\\SiTani\\SiPetani\\wwwroot\\",
+      "ContentRoot": "D:\\Creation\\GitHub Stuff\\SiTani\\SiPetani\\wwwroot\\",
       "BasePath": "_content/SiPetani",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.svg",
       "AssetKind": "All",
@@ -204,10 +204,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg"
     },
     {
-      "Identity": "C:\\Users\\Asgarindo\\source\\repos\\SiTani\\SiPetani\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
+      "Identity": "D:\\Creation\\GitHub Stuff\\SiTani\\SiPetani\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
       "SourceId": "SiPetani",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Asgarindo\\source\\repos\\SiTani\\SiPetani\\wwwroot\\",
+      "ContentRoot": "D:\\Creation\\GitHub Stuff\\SiTani\\SiPetani\\wwwroot\\",
       "BasePath": "_content/SiPetani",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.ttf",
       "AssetKind": "All",
@@ -221,10 +221,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf"
     },
     {
-      "Identity": "C:\\Users\\Asgarindo\\source\\repos\\SiTani\\SiPetani\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
+      "Identity": "D:\\Creation\\GitHub Stuff\\SiTani\\SiPetani\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
       "SourceId": "SiPetani",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Asgarindo\\source\\repos\\SiTani\\SiPetani\\wwwroot\\",
+      "ContentRoot": "D:\\Creation\\GitHub Stuff\\SiTani\\SiPetani\\wwwroot\\",
       "BasePath": "_content/SiPetani",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.woff",
       "AssetKind": "All",
@@ -238,10 +238,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
     },
     {
-      "Identity": "C:\\Users\\Asgarindo\\source\\repos\\SiTani\\SiPetani\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
+      "Identity": "D:\\Creation\\GitHub Stuff\\SiTani\\SiPetani\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
       "SourceId": "SiPetani",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Asgarindo\\source\\repos\\SiTani\\SiPetani\\wwwroot\\",
+      "ContentRoot": "D:\\Creation\\GitHub Stuff\\SiTani\\SiPetani\\wwwroot\\",
       "BasePath": "_content/SiPetani",
       "RelativePath": "css/open-iconic/FONT-LICENSE",
       "AssetKind": "All",
@@ -255,10 +255,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\FONT-LICENSE"
     },
     {
-      "Identity": "C:\\Users\\Asgarindo\\source\\repos\\SiTani\\SiPetani\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
+      "Identity": "D:\\Creation\\GitHub Stuff\\SiTani\\SiPetani\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
       "SourceId": "SiPetani",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Asgarindo\\source\\repos\\SiTani\\SiPetani\\wwwroot\\",
+      "ContentRoot": "D:\\Creation\\GitHub Stuff\\SiTani\\SiPetani\\wwwroot\\",
       "BasePath": "_content/SiPetani",
       "RelativePath": "css/open-iconic/ICON-LICENSE",
       "AssetKind": "All",
@@ -272,10 +272,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\ICON-LICENSE"
     },
     {
-      "Identity": "C:\\Users\\Asgarindo\\source\\repos\\SiTani\\SiPetani\\wwwroot\\css\\open-iconic\\README.md",
+      "Identity": "D:\\Creation\\GitHub Stuff\\SiTani\\SiPetani\\wwwroot\\css\\open-iconic\\README.md",
       "SourceId": "SiPetani",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Asgarindo\\source\\repos\\SiTani\\SiPetani\\wwwroot\\",
+      "ContentRoot": "D:\\Creation\\GitHub Stuff\\SiTani\\SiPetani\\wwwroot\\",
       "BasePath": "_content/SiPetani",
       "RelativePath": "css/open-iconic/README.md",
       "AssetKind": "All",
@@ -289,10 +289,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\README.md"
     },
     {
-      "Identity": "C:\\Users\\Asgarindo\\source\\repos\\SiTani\\SiPetani\\wwwroot\\css\\site.css",
+      "Identity": "D:\\Creation\\GitHub Stuff\\SiTani\\SiPetani\\wwwroot\\css\\site.css",
       "SourceId": "SiPetani",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Asgarindo\\source\\repos\\SiTani\\SiPetani\\wwwroot\\",
+      "ContentRoot": "D:\\Creation\\GitHub Stuff\\SiTani\\SiPetani\\wwwroot\\",
       "BasePath": "_content/SiPetani",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -306,10 +306,10 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "C:\\Users\\Asgarindo\\source\\repos\\SiTani\\SiPetani\\wwwroot\\favicon.ico",
+      "Identity": "D:\\Creation\\GitHub Stuff\\SiTani\\SiPetani\\wwwroot\\favicon.ico",
       "SourceId": "SiPetani",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Asgarindo\\source\\repos\\SiTani\\SiPetani\\wwwroot\\",
+      "ContentRoot": "D:\\Creation\\GitHub Stuff\\SiTani\\SiPetani\\wwwroot\\",
       "BasePath": "_content/SiPetani",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",

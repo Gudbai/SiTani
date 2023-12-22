@@ -1,7 +1,222 @@
 ﻿@page "/pengguna"
+@using DataLibrary
+@using Models
+@using Microsoft.Extensions.Configuration
+@inject IDataAccess _data
+@inject IConfiguration _config
+@inject HttpClient Http
+@inject IJSRuntime JSRuntime
 
-<h3>User</h3>
+<div class="sub-navbar">
+	<ul>
+		<li><button class="btn btn-primary1" @onclick='(() => ChangeQuery("SELECT * FROM User_Info", "user_info"))'>User Info</button></li>
+		<li><button class="btn btn-primary1" @onclick='(() => ChangeQuery("SELECT * FROM User_Position", "user_position"))'>User Position</button></li>
+		<li><button class="btn btn-primary1" @onclick='(() => ChangeQuery("SELECT * FROM Credential", "credential"))'>Credential</button></li>
+		<li><button class="btn btn-primary1" @onclick='(() => ChangeQuery("SELECT * FROM Role", "role"))'>Role</button></li>
+		<li><button class="btn btn-primary1" @onclick='(() => ChangeQuery("SELECT * FROM Management", "management"))'>Management</button></li>
+	</ul>
+</div>
+
+
+@if (user_info == null)
+{
+	<p><em>Loading...</em></p>
+}
+else if (user_info != null && mode == "user_info")
+{
+	<div class="table-buatan">
+		<table class="content-table">
+			<thead>
+				<tr>
+					<th>User Id</th>
+					<th>First Name</th>
+					<th>Last Name</th>
+					<th>Phone Number</th>
+					<th>Email</th>
+					<th>Position Id</th>
+					<th></th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+				@foreach (var p in user_info)
+				{
+					<tr>
+						<td>@p.User_Id</td>
+						<td>@p.First_Name</td>
+						<td>@p.Last_Name</td>
+						<td>@p.Phone_Number</td>
+						<td>@p.Email</td>
+						<td>@p.Position_Id</td>
+						<td><button class="btn btn-warning">Edit</button></td>
+						<td><button class="btn btn-danger">Delete</button></td>
+					</tr>
+				}
+			</tbody>
+		</table>
+
+		<button class="btn btn-primary" style="margin-left:25px">Insert</button>
+	</div>
+}
+else if (user_position != null && mode == "user_position")
+{
+	<div class="table-buatan">
+		<table class="content-table">
+			<thead>
+				<tr>
+					<th>Position Id</th>
+					<th>Position Name</th>
+					<th></th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+				@foreach (var p in user_position)
+				{
+					<tr>
+						<td>@p.Position_Id</td>
+						<td>@p.Position_Name</td>
+						<td><button class="btn btn-warning">Edit</button></td>
+						<td><button class="btn btn-danger">Delete</button></td>
+					</tr>
+				}
+			</tbody>
+		</table>
+
+		<button class="btn btn-primary" style="margin-left:25px">Insert</button>
+	</div>
+}
+else if (credential != null && mode == "credential")
+{
+	<div class="table-buatan">
+		<table class="content-table">
+			<thead>
+				<tr>
+					<th>Credential Id</th>
+					<th>User Id</th>
+					<th>Role Id</th>
+					<th>Username</th>
+					<th>Password</th>
+					<th></th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+				@foreach (var p in credential)
+				{
+					<tr>
+						<td>@p.Credential_Id</td>
+						<td>@p.User_Id</td>
+						<td>@p.Role_Id</td>
+						<td>@p.Username</td>
+						<td>@p.Password</td>
+						<td><button class="btn btn-warning">Edit</button></td>
+						<td><button class="btn btn-danger">Delete</button></td>
+					</tr>
+				}
+			</tbody>
+		</table>
+
+		<button class="btn btn-primary" style="margin-left:25px">Insert</button>
+	</div>
+}
+else if (role != null && mode == "role")
+{
+	<div class="table-buatan">
+		<table class="content-table">
+			<thead>
+				<tr>
+					<th>Role Id</th>
+					<th>Role Name</th>
+					<th></th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+				@foreach (var p in role)
+				{
+					<tr>
+						<td>@p.Role_Id</td>
+						<td>@p.Role_Name</td>
+						<td><button class="btn btn-warning">Edit</button></td>
+						<td><button class="btn btn-danger">Delete</button></td>
+					</tr>
+				}
+			</tbody>
+		</table>
+
+		<button class="btn btn-primary" style="margin-left:25px">Insert</button>
+	</div>
+}
+else if (management != null && mode == "management")
+{
+	<div class="table-buatan">
+		<table class="content-table">
+			<thead>
+				<tr>
+					<th>Manager Id</th>
+					<th>User Id</th>
+					<th></th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+				@foreach (var p in management)
+				{
+					<tr>
+						<td>@p.Manager_Id</td>
+						<td>@p.User_Id</td>
+						<td><button class="btn btn-warning">Edit</button></td>
+						<td><button class="btn btn-danger">Delete</button></td>
+					</tr>
+				}
+			</tbody>
+		</table>
+
+		<button class="btn btn-primary" style="margin-left:25px">Insert</button>
+	</div>
+}
 
 @code {
+	// Models
+	List<UserModel> user_info;
+	List<UserPositionModel> user_position;
+	List<CredentialModel> credential;
+	List<RoleModel> role;
+	List<ManagementModel> management;
 
+	// sql stuff
+	string sqlSelected = "SELECT * FROM User_Info";
+	string mode = "user_info";
+
+	private async void ChangeQuery(string sql, string _mode)
+	{
+		sqlSelected = sql;
+		mode = _mode;
+
+		await OnInitializedAsync();
+	}
+
+	protected override async Task OnInitializedAsync()
+	{
+		switch (mode)
+		{
+			case "user_info":
+				user_info = await _data.LoadData<UserModel, dynamic>(sqlSelected, new { }, _config.GetConnectionString("default"));
+				break;
+			case "user_position":
+				user_position = await _data.LoadData<UserPositionModel, dynamic>(sqlSelected, new { }, _config.GetConnectionString("default"));
+				break;
+			case "credential":
+				credential = await _data.LoadData<CredentialModel, dynamic>(sqlSelected, new { }, _config.GetConnectionString("default"));
+				break;
+			case "role":
+				role = await _data.LoadData<RoleModel, dynamic>(sqlSelected, new { }, _config.GetConnectionString("default"));
+				break;
+			case "management":
+				management = await _data.LoadData<ManagementModel, dynamic>(sqlSelected, new { }, _config.GetConnectionString("default"));
+				break;
+		}
+
+	}
 }

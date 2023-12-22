@@ -22,3 +22,15 @@ C:\Users\Asgarindo\Source\Repos\SiTani\DataLibrary\obj\Debug\net6.0\DataLibrary.
 C:\Users\Asgarindo\Source\Repos\SiTani\DataLibrary\obj\Debug\net6.0\refint\DataLibrary.dll
 C:\Users\Asgarindo\Source\Repos\SiTani\DataLibrary\obj\Debug\net6.0\DataLibrary.pdb
 C:\Users\Asgarindo\Source\Repos\SiTani\DataLibrary\obj\Debug\net6.0\ref\DataLibrary.dll
+D:\Creation\GitHub Stuff\SiTani\DataLibrary\bin\Debug\net6.0\DataLibrary.deps.json
+D:\Creation\GitHub Stuff\SiTani\DataLibrary\bin\Debug\net6.0\DataLibrary.dll
+D:\Creation\GitHub Stuff\SiTani\DataLibrary\bin\Debug\net6.0\DataLibrary.pdb
+D:\Creation\GitHub Stuff\SiTani\DataLibrary\obj\Debug\net6.0\DataLibrary.csproj.AssemblyReference.cache
+D:\Creation\GitHub Stuff\SiTani\DataLibrary\obj\Debug\net6.0\DataLibrary.GeneratedMSBuildEditorConfig.editorconfig
+D:\Creation\GitHub Stuff\SiTani\DataLibrary\obj\Debug\net6.0\DataLibrary.AssemblyInfoInputs.cache
+D:\Creation\GitHub Stuff\SiTani\DataLibrary\obj\Debug\net6.0\DataLibrary.AssemblyInfo.cs
+D:\Creation\GitHub Stuff\SiTani\DataLibrary\obj\Debug\net6.0\DataLibrary.csproj.CoreCompileInputs.cache
+D:\Creation\GitHub Stuff\SiTani\DataLibrary\obj\Debug\net6.0\DataLibrary.dll
+D:\Creation\GitHub Stuff\SiTani\DataLibrary\obj\Debug\net6.0\refint\DataLibrary.dll
+D:\Creation\GitHub Stuff\SiTani\DataLibrary\obj\Debug\net6.0\DataLibrary.pdb
+D:\Creation\GitHub Stuff\SiTani\DataLibrary\obj\Debug\net6.0\ref\DataLibrary.dll
