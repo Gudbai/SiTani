@@ -10,3 +10,15 @@ D:\Creation\CSharp\SiPetani\DataLibrary\obj\Debug\net6.0\DataLibrary.dll
 D:\Creation\CSharp\SiPetani\DataLibrary\obj\Debug\net6.0\refint\DataLibrary.dll
 D:\Creation\CSharp\SiPetani\DataLibrary\obj\Debug\net6.0\DataLibrary.pdb
 D:\Creation\CSharp\SiPetani\DataLibrary\obj\Debug\net6.0\ref\DataLibrary.dll
+C:\Users\Asgarindo\Source\Repos\SiTani\DataLibrary\bin\Debug\net6.0\DataLibrary.deps.json
+C:\Users\Asgarindo\Source\Repos\SiTani\DataLibrary\bin\Debug\net6.0\DataLibrary.dll
+C:\Users\Asgarindo\Source\Repos\SiTani\DataLibrary\bin\Debug\net6.0\DataLibrary.pdb
+C:\Users\Asgarindo\Source\Repos\SiTani\DataLibrary\obj\Debug\net6.0\DataLibrary.csproj.AssemblyReference.cache
+C:\Users\Asgarindo\Source\Repos\SiTani\DataLibrary\obj\Debug\net6.0\DataLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Asgarindo\Source\Repos\SiTani\DataLibrary\obj\Debug\net6.0\DataLibrary.AssemblyInfoInputs.cache
+C:\Users\Asgarindo\Source\Repos\SiTani\DataLibrary\obj\Debug\net6.0\DataLibrary.AssemblyInfo.cs
+C:\Users\Asgarindo\Source\Repos\SiTani\DataLibrary\obj\Debug\net6.0\DataLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Asgarindo\Source\Repos\SiTani\DataLibrary\obj\Debug\net6.0\DataLibrary.dll
+C:\Users\Asgarindo\Source\Repos\SiTani\DataLibrary\obj\Debug\net6.0\refint\DataLibrary.dll
+C:\Users\Asgarindo\Source\Repos\SiTani\DataLibrary\obj\Debug\net6.0\DataLibrary.pdb
+C:\Users\Asgarindo\Source\Repos\SiTani\DataLibrary\obj\Debug\net6.0\ref\DataLibrary.dll

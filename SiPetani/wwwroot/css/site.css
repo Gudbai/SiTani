@@ -1,3 +1,5 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css");
+
 html, body {
     font-family: 'Poppins', Helvetica, Arial, sans-serif;
     overflow: hidden;
@@ -33,6 +35,7 @@ html, body {
     margin: 20px;
     width: 35%;
     flex-direction: column;
+    color: #7f7f7f;
 }
 
     .weather-card1 h3 {
@@ -51,6 +54,7 @@ html, body {
     padding: 30px;
     margin: 20px;
     width: 35%;
+    color: #7f7f7f;
 }
 
     .weather-card2 h3 {
@@ -68,7 +72,8 @@ html, body {
     border-radius: 30px;
     padding: 30px;
     margin: 20px;
-    width: auto;
+    width: 300px;
+    color: #7f7f7f;
 }
 
     .weather-card3 h3 {
@@ -159,14 +164,49 @@ label {
         width: 100%;
         height: 100%;
         border: 0;
-        border-radius:50px;
+        border-radius:20px;
     }
 
-
-
-.content {
-    padding-top: 1.1rem;
+.content-table {
+    border-collapse: collapse;
+    margin: 25px;
+    font-size: 0.9em;
+    width: 96%;
+    border-radius: 10px 10px 10px 10px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
+
+    .content-table thead tr {
+        background-color: #729d96;
+        color: #ffffff;
+        text-align: left;
+        font-weight: bold;
+    }
+
+    .content-table th,
+    .content-table td {
+        padding: 12px 15px;
+    
+    }
+
+    .content-table tbody tr {
+        border-bottom: 1px solid #dddddd;
+        color: #7f7f7f;
+    }
+
+        .content-table tbody tr:nth-of-type(even) {
+            background-color: #f3f3f3;
+        }
+
+        .content-table tbody tr:last-of-type {
+           /*border-bottom: 2px solid #729d96;*/
+        }
+
+
+
+
+
 
 .valid.modified:not([type=checkbox]) {
     outline: 1px solid #26b050;
