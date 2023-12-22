@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34202.233
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SiPetani", "SiPetani\SiPetani.csproj", "{7E29AF56-2732-44D9-A827-82217DA3BEBA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SiPetani", "SiPetani\SiPetani.csproj", "{7E29AF56-2732-44D9-A827-82217DA3BEBA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataLibrary", "DataLibrary\DataLibrary.csproj", "{C8D82F39-F22C-48E4-B720-617384C6DF8D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataLibrary", "DataLibrary\DataLibrary.csproj", "{C8D82F39-F22C-48E4-B720-617384C6DF8D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

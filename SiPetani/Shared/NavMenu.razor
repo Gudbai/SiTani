@@ -1,46 +1,69 @@
-﻿<div class="sidenavbar">
-    <div class="logo">
-        <img src="Assets/SiPetaniNoBG.png" class="logo-sipetani" />
+﻿
+<div class="sidenavbar">
+    <div class="hide-navbar" @onclick="ToggleHamburgerMenu">
+        <div class="nav-item px-3">
+            <NavLink class="navbar-toggler">
+                <span class="bi bi-list" aria-hidden="true"></span> Menu
+            </NavLink>
+        </div>
     </div>
+    @if (!hamburgerMenuVisible)
+    {
+        <div class="logo">
+            <img src="Assets/SiPetaniNoBG.png" class="logo-sipetani" />
+        </div>
 
-    <div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
-        <nav class="flex-column">
-            <div class="nav-item px-3 ">
-                <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                    <span class="oi oi-home" aria-hidden="true"></span> Beranda
-                </NavLink>
-            </div>
-            <div class="nav-item px-3">
-                <NavLink class="nav-link" href="cuaca">
-                    <span class="oi oi-plus" aria-hidden="true"></span> Cuaca
-                </NavLink>
-            </div>
-            <div class="nav-item px-3">
-                <NavLink class="nav-link" href="produksi">
-                    <span class="oi oi-list-rich" aria-hidden="true"></span> Produksi
-                </NavLink>
-            </div>
-            <div class="nav-item px-3">
-                <NavLink class="nav-link" href="hasilpanen">
-                    <span class="oi oi-list-rich" aria-hidden="true"></span> Laporan Hasil Panen
-                </NavLink>
-            </div>
-            <div class="nav-item px-3">
-                <NavLink class="nav-link" href="petapertanian">
-                    <span class="oi oi-list-rich" aria-hidden="true"></span> Peta Pertanian
-                </NavLink>
-            </div>
-            <div class="nav-item px-3">
-                <NavLink class="nav-link" href="pemberitahuan">
-                    <span class="oi oi-list-rich" aria-hidden="true"></span> Pemberitahuan
-                </NavLink>
-            </div>
-        </nav>
-    </div>
+        <div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
+            <nav class="flex-column">
+                <div class="nav-item px-3 ">
+                    <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+                        <span class="bi bi-house" aria-hidden="true"></span>  Beranda
+                    </NavLink>
+                </div>
+                <div class="nav-item px-3">
+                    <NavLink class="nav-link" href="pengguna">
+                        <span class="bi bi-people" aria-hidden="true"></span> Pengguna
+                    </NavLink>
+                </div>
+                <div class="nav-item px-3">
+                    <NavLink class="nav-link" href="tanaman">
+                        <span class="bi bi-flower3" aria-hidden="true"></span> Tanaman
+                    </NavLink>
+                </div>
+                <div class="nav-item px-3">
+                    <NavLink class="nav-link" href="cuaca">
+                        <span class="bi bi-cloud-fog2" aria-hidden="true"></span> Cuaca
+                    </NavLink>
+                </div>
+                <div class="nav-item px-3">
+                    <NavLink class="nav-link" href="produksi">
+                        <span class="bi bi-house-gear" aria-hidden="true"></span> Produksi
+                    </NavLink>
+                </div>
+                <div class="nav-item px-3">
+                    <NavLink class="nav-link" href="hasilpanen">
+                        <span class="bi bi-journal" aria-hidden="true"></span> Laporan Hasil Panen
+                    </NavLink>
+                </div>
+                <div class="nav-item px-3">
+                    <NavLink class="nav-link" href="petapertanian">
+                        <span class="bi bi-geo-alt" aria-hidden="true"></span> Peta Pertanian
+                    </NavLink>
+                </div>
+                <div class="nav-item px-3">
+                    <NavLink class="nav-link" href="pemberitahuan">
+                        <span class="bi bi-bell" aria-hidden="true"></span> Pemberitahuan
+                    </NavLink>
+                </div>
+            </nav>
+        </div>
+        
+    }
 </div>
 
 @code {
     private bool collapseNavMenu = true;
+    private bool hamburgerMenuVisible = false;
 
     private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
 
@@ -48,4 +71,10 @@
     {
         collapseNavMenu = !collapseNavMenu;
     }
+    private void ToggleHamburgerMenu()
+    {
+        hamburgerMenuVisible = !hamburgerMenuVisible;
+    }
+
+
 }
